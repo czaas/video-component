@@ -2,6 +2,6 @@ import React from 'react';
 import ReactDom from 'react-dom';
 
 import './css/main.scss';
-import { TestMount } from './test.js';
+import { VideoFeature } from './video-feature/index';
 
-ReactDom.render(<TestMount />, document.getElementById('app'));
+ReactDom.render(<VideoFeature />, document.getElementById('app'));
