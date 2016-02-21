@@ -17,7 +17,7 @@ export class OtherVideos extends React.Component {
 		});
 
 		return (
-			<div>
+			<div className='other-videos-wrapper'>
 				{otherVideos}
 			</div>
 		);

@@ -35,6 +35,6 @@ export function getVideos() {
 				dispatch(recieveVideos(response.data));
 				dispatch(setMainVideo(response.data[0]));
 			})
-			.catch(err => console.error(err))
+			.catch(err => console.error(err));
 	}
 }
