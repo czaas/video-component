@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 
 import {
+	REQUEST_VIDEOS,
+	RECEIVE_VIDEOS,
 	GET_VIDEOS,
 } from './_action-types';
 
@@ -19,6 +21,12 @@ export function videoFeatureReducer(state = {
 		case GET_VIDEOS:
 			return Object.assign({}, state, {
 				isLoading: true,
+			});
+
+		case RECEIVE_VIDEOS:
+			return Object.assign({}, state, {
+				isLoading: false,
+				allVideos: [...action.data]
 			});
 
 		default: 
