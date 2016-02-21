@@ -12,10 +12,15 @@ export class VideoFeature extends React.Component {
 		super(props);
 
 		this.componentDidMount = this.componentDidMount.bind(this);
+		this.handleLoadVideo = this.handleLoadVideo.bind(this);
 	}
 
 	componentDidMount() {
 		this.props.feature.getVideos();
+	}
+
+	handleLoadVideo(video) {
+		this.props.feature.setMainVideo(video)
 	}
 
 	render() {
@@ -30,7 +35,11 @@ export class VideoFeature extends React.Component {
 
 				<div>
 					<h2>Related Videos</h2>
-					<OtherVideos allVideos={this.props.allVideos} currentVideo={this.props.mainVideo} />
+					<OtherVideos 
+						allVideos={this.props.allVideos} 
+						currentVideo={this.props.mainVideo} 
+						handleLoadVideo={this.handleLoadVideo}
+					/>
 				</div>
 			</div>
 		);
