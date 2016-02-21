@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import * as actions from '../redux/actions';
+import { MainVideo } from './main-video'
 import { OtherVideos } from './other-videos';
 
 export class VideoFeature extends React.Component {
@@ -24,13 +25,12 @@ export class VideoFeature extends React.Component {
 
 				<div>
 					<h2>Main Video</h2>
-					<p>Title</p>
-					<p>Description</p>
+					<MainVideo video={this.props.mainVideo} />
 				</div>
 
 				<div>
 					<h2>Related Videos</h2>
-					<OtherVideos allVideos='' currentVideo='' />
+					<OtherVideos allVideos={this.props.allVideos} currentVideo={this.props.mainVideo} />
 				</div>
 			</div>
 		);
