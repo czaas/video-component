@@ -1,0 +1,17 @@
+.other-videos-wrapper {
+	width: 100%;
+	& > div {
+		width: 100%;
+		vertical-align: top;
+		display: inline-block;
+		padding: 0 10px;
+		
+		@media screen and (min-width: 540px) {
+			width: 50%;
+		}
+
+		@media screen and (min-width: 768px) {
+			width: 33.3%;
+		}
+	}
+}
