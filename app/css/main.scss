@@ -1,0 +1,21 @@
+* {
+	box-sizing: border-box;
+
+	&:before,
+	&:after {
+		box-sizing: inherit;
+	}
+}
+
+html {
+	body {
+		font-size: 62.5%;
+
+		.container {
+			width: 100%;
+			max-width: 750px;
+			margin: 0 auto;
+			font-size: 1.6rem;
+		}
+	}
+}
