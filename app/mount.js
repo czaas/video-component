@@ -7,9 +7,18 @@ import './css/main.scss';
 import { store } from './redux/store';
 import VideoFeature from './video-feature/index';
 
+export default class VideoFeatureApp extends React.Component {
+	render() {
+		return (
+			<Provider store={store()}>
+				<VideoFeature />
+			</Provider>
+		);
+	}
+}
+
+
 ReactDom.render(
-	<Provider store={store()}>
-		<VideoFeature />
-	</Provider>, 
+	<VideoFeatureApp />, 
 	document.getElementById('app')
 );
