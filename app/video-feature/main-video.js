@@ -8,7 +8,7 @@ export class MainVideo extends React.Component {
 				<div className='video-wrapper'>
 					<ReactPlayer
 						url={this.props.video.content.videoUrl}
-						playing={false}
+						playing={this.props.video.autoplay}
 						width={'100%'}
 						height={'100%'}
 					/>

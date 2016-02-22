@@ -20,6 +20,9 @@ export class VideoFeature extends React.Component {
 	}
 
 	handleLoadVideo(video) {
+
+		video.autoplay = true;
+		
 		this.props.feature.setMainVideo(video)
 	}
 
