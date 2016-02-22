@@ -12,6 +12,11 @@ module.exports = {
 		publicPath: '/dist/'
 	},
 	plugins: [
+		// new webpack.DefinePlugin({
+		// 	'process.env': {
+		// 		'NODE_ENV': JSON.stringify('production')
+		// 	}
+		// }),
 		new webpack.HotModuleReplacementPlugin() // Hot reloading for react components
 	],
 	module: {
