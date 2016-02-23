@@ -1,15 +1,12 @@
 .other-videos-wrapper {
-	width: 100%;
-	display: table;
 
 	& > div {
-		width: 100%;
 		vertical-align: top;
 		padding: 10px;
 		transition: background .2s ease-out;
 
 		@media screen and (min-width: 768px) {
-			display: table-cell;
+			display: inline-block;
 			width: 33.3%;
 		}
 
