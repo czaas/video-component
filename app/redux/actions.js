@@ -12,7 +12,7 @@ export function requestVideos() {
 	}
 }
 
-export function recieveVideos(data) {
+export function receiveVideos(data) {
 	return {
 		type: RECEIVE_VIDEOS,
 		data
@@ -32,7 +32,7 @@ export function getVideos() {
 
 		axios.get('http://dev100.etnainteractive.com/api/v1/content/?type=video')
 			.then((response) => {
-				dispatch(recieveVideos(response.data));
+				dispatch(receiveVideos(response.data));
 				dispatch(setMainVideo(response.data[0]));
 			})
 			.catch(err => console.error(err));
